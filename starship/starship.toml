@@ -1,0 +1,85 @@
+#Location: ~/.config/starship.toml
+#What_is_starship: https://starship.rs/
+
+add_newline = true
+command_timeout = 2000
+
+format = """$env_var$os$username$hostname$directory$git_branch$git_status$python$nodejs$terraform
+$character
+"""
+
+[character]
+success_symbol = "╰─≫"
+error_symbol = "╰─≫"
+format = "[$symbol](#778899) "
+# ╭╴ ╰─
+
+[env_var]
+symbol = "╭───"
+variable = 'SHELL'
+format = "[$symbol](#778899)"
+disabled = false
+
+# Shows the username
+[username]
+style_user = 'yellow bold'
+style_root = 'black bold'
+format = '[ ](black bold)[$user](#7883ff)'
+disabled = false
+show_always = true
+
+# Shows the hostname
+[hostname]
+ssh_only = false
+format = '[@](black bold)[$hostname](bold blue) '
+disabled = false
+
+# Shows current directory
+[directory]
+truncation_length = 0
+truncation_symbol = '…/'
+home_symbol = '~'
+format = '[::](bold black) [$path]($style) '
+style = '#7ed1fb' # yellow bold
+
+
+# Shows current git branch
+[git_branch]
+symbol = ' '
+format = '[::](black bold) [$symbol$branch]($style)'
+style = 'bold green'
+
+# Shows current git status
+[git_status]
+disabled = false
+format = '[$ahead_behind $all_status]($style) '
+style = 'bold green'
+ahead = '[⇡](bold green)[$count](green)'
+diverged = '[⇡](bold green)[$ahead_count](green)[⇣](bold green)[$behind_count](green)'
+behind = '[⇣](bold green)[$count](green)'
+up_to_date = ''
+conflicted = '💥[$count](red)'
+stashed = '[\\$](bold red)[$count](red)'
+deleted = '[✘](bold red)[$count](red)'
+renamed = '[»](bold red)[$count](red)'
+modified = '[✚](bold red)[$count](red)'
+staged = '[●](bold red)[$count](red)'
+untracked = '[…](bold red)[$count](red)'
+
+[python]
+symbol = '󰌠'
+python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
+version_format = '${raw}'
+format = '[::](black bold) [${symbol} (\($virtualenv\))]($style) '
+
+[nodejs]
+disabled = true
+symbol = ''
+version_format = '${raw}'
+format = '[::](black bold) [${symbol}] ($style) '
+
+[terraform]
+disabled = true
+symbol = ''
+version_format = '${raw}'
+format = '[::](black bold) [${symbol} (\($workspace\))] ($style) '
