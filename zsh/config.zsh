@@ -1,4 +1,11 @@
 #
+# Import local config
+#
+
+# NOTE: Load env.zsh before loading sheldon and starship
+[ -f $ZCONFDIR/env.zsh ] && . $ZCONFDIR/env.zsh
+
+#
 # Plugins
 #
 
@@ -43,12 +50,6 @@ function select-history() {
 zle -N select-history
 bindkey "^r" select-history
 
-
-#
-# Import local config
-#
-
-[ -f $ZCONFDIR/env.zsh ] && . $ZCONFDIR/env.zsh
 
 #
 # Options
