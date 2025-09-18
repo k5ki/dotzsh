@@ -31,3 +31,8 @@ zsh config sharing for macOS users.
 | Cmd+W       | タブを閉じる   |
 | Cmd+Shift+] | 右のタブに移動 |
 | Cmd+Shift+[ | 左のタブに移動 |
+
+## Thanks
+
+- Mecha mecha based on this article
+  - [楽しく開発するための私のターミナル設定 - Zenn](https://zenn.dev/chot/articles/1d10f3a40332ab#zsh%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3)
