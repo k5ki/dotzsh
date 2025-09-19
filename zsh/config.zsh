@@ -1,9 +1,4 @@
-#
-# Import local config
-#
-
-# NOTE: Load env.zsh before loading sheldon and starship
-[ -f $ZCONFDIR/env.zsh ] && . $ZCONFDIR/env.zsh
+[ -f $ZCONFDIR/conf.d/preload.zsh ] && . $ZCONFDIR/conf.d/preload.zsh
 
 #
 # Plugins
@@ -113,3 +108,14 @@ setopt hist_ignore_all_dups
 export HISTFILE=${HOME}/.zhistory
 export HISTSIZE=10000
 export SAVEHIST=20000
+
+#
+# Import conf.d/*.zsh
+#
+
+for file in $(find "$ZCONFDIR/conf.d" -type f -name '*.zsh'); do
+  if [[ $file != *"/preload.zsh"* ]] && [[ $file != *"/override.zsh"* ]]; then . $file fi;
+done
+
+
+[ -f $ZCONFDIR/conf.d/override.zsh ] && . $ZCONFDIR/conf.d/override.zsh

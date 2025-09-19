@@ -18,9 +18,9 @@ fi
 mkdir -p "$HOME/.config"
 ln -s "$PWD/starship/starship.toml" "$HOME/.config/starship.toml"
 ln -s "$PWD/sheldon" "$HOME/.config/sheldon"
+cp "$PWD/zsh/.template/*.zsh" "$PWD/zsh/conf.d/"
 ln -s "$PWD/zsh" "$HOME/.config/zsh"
 ln -s "$PWD/.zshrc" "$HOME/.zshrc"
-touch "$PWD/zsh/env.zsh"
 
 if ! type "sheldon" &>/dev/null; then
   echo "sheldon is not installed"
