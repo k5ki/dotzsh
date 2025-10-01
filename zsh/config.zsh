@@ -115,7 +115,6 @@ export SAVEHIST=20000
 
 for file in $(find "$ZCONFDIR/conf.d" -type f -name '*.zsh'); do
   if [[ $file != *"/preload.zsh"* ]] && [[ $file != *"/override.zsh"* ]]; then . $file fi;
-done
-
+done;
 
 [ -f $ZCONFDIR/conf.d/override.zsh ] && . $ZCONFDIR/conf.d/override.zsh
