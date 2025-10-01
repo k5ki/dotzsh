@@ -2,35 +2,54 @@
 
 zsh config sharing for macOS users.
 
-# 付録
+## Prerequisites
 
-## チートシート
+- zsh
+  - macOS default is OK
+- homebrew
+  - see [https://brew.sh](https://brew.sh)
+- fzf
+  - `brew install fzf`
+- starship
+  - `brew install starship`
+- sheldon
+  - `brew install sheldon`
 
-### シェル
+## Appendix
 
-| キー   | アクション                       |
-| ------ | -------------------------------- |
-| Ctrl+A | 行頭に移動                       |
-| Ctrl+E | 行末に移動                       |
-| Ctrl+F | →                                |
-| Ctrl+B | ←                                |
-| Ctrl+P | ↑                                |
-| Ctrl+N | ↓                                |
-| Ctrl+K | カーソル位置から行末までを削除   |
-| Ctrl+W | カーソル位置後ろの単語を一つ削除 |
-| Ctrl+R | 履歴検索                         |
-| Meta+F | 一単語分 →                       |
-| Meta+B | 一単語分 ←                       |
+### Cheatsheet
 
-### Ghostty
+#### Shell
 
-| キー        | アクション     |
+| Keybind | Action                           |
+| ------- | -------------------------------- |
+| Ctrl+A  | 行頭に移動                       |
+| Ctrl+E  | 行末に移動                       |
+| Ctrl+F  | →                                |
+| Ctrl+B  | ←                                |
+| Ctrl+P  | ↑                                |
+| Ctrl+N  | ↓                                |
+| Ctrl+K  | カーソル位置から行末までを削除   |
+| Ctrl+W  | カーソル位置後ろの単語を一つ削除 |
+| Ctrl+R  | 履歴検索                         |
+| Meta+F  | 一単語分 →                       |
+| Meta+B  | 一単語分 ←                       |
+
+#### Ghostty
+
+| Keybind     | Action         |
 | ----------- | -------------- |
 | Cmd+Shift+, | 設定の反映     |
 | Cmd+T       | タブを開く     |
 | Cmd+W       | タブを閉じる   |
 | Cmd+Shift+] | 右のタブに移動 |
 | Cmd+Shift+[ | 左のタブに移動 |
+
+| Command              | Action                             |
+| -------------------- | ---------------------------------- |
+| ghostty +list-fonts  | 利用可能なフォント一覧の表示       |
+| ghostty +list-themes | 利用可能なカラーテーマのプレビュー |
+| ghostty --help       | その他コマンドは --help で確認可   |
 
 ## Thanks
 
